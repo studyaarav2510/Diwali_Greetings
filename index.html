@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Happy Diwali 🪔 Wishing you light, joy &amp; prosperity</title>
+<meta name="description" content="A little Diwali surprise for you. Light the diya and open your wishes.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Happy Diwali 🪔">
+<meta property="og:description" content="A little surprise is waiting for you. Light the diya to open it ✨">
+<meta name="theme-color" content="#2a0a3d">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🪔</text></svg>">
+<style>
+:root{--bg1:#2a0a3d;--bg2:#6b0f2a;--gold:#ffd36b;--gold2:#ff9f1c;--ink:#fff4dc;--card:rgba(255,255,255,.07);--line:rgba(255,211,107,.35)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg1:#2a0a3d;--bg2:#6b0f2a}}
+:root[data-theme="dark"]{--bg1:#2a0a3d;--bg2:#6b0f2a}
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;color:var(--ink);font-family:Georgia,"Times New Roman",serif;text-align:center;background:radial-gradient(ellipse at 50% 0%,var(--bg2),var(--bg1) 70%) fixed;background-color:#2a0a3d;overflow-x:hidden}
+canvas{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:0}
+.lights{position:relative;z-index:1;display:flex;justify-content:space-around;padding:0 4px;height:26px;overflow:hidden}
+.lights i{width:10px;height:10px;border-radius:50%;margin-top:8px;background:var(--gold);box-shadow:0 0 10px 3px var(--gold2);animation:tw 1.6s infinite}
+.lights i:nth-child(3n){background:#ff5d8f;box-shadow:0 0 10px 3px #ff5d8f;animation-delay:.4s}
+.lights i:nth-child(3n+1){background:#7df0c5;box-shadow:0 0 10px 3px #7df0c5;animation-delay:.9s}
+@keyframes tw{50%{opacity:.25}}
+main{position:relative;z-index:1;max-width:760px;margin:0 auto;padding:30px 20px 40px}
+.diya{font-size:76px;filter:drop-shadow(0 0 22px var(--gold2));animation:flick 2.4s ease-in-out infinite}
+@keyframes flick{0%,100%{transform:scale(1)}50%{transform:scale(1.08);filter:drop-shadow(0 0 36px var(--gold))}}
+.to{color:var(--gold);font-size:20px;min-height:26px}
+h1{font-size:clamp(40px,12vw,76px);line-height:1.05;margin:6px 0 10px;background:linear-gradient(90deg,var(--gold),#fff,var(--gold2));-webkit-background-clip:text;background-clip:text;color:transparent}
+h2{font-weight:normal;font-size:clamp(22px,6vw,30px);color:var(--gold);margin:0 0 14px}
+.tag{font-size:18px;color:var(--gold);margin:0 0 26px}
+section{margin:46px 0}
+.msg{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px 20px;font-size:19px;line-height:1.65}
+.days{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;text-align:left}
+.day{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px}
+.day b{display:block;color:var(--gold);margin:4px 0}
+.day span{font-size:26px}
+.day p{margin:0;font-size:15px;line-height:1.5;opacity:.9}
+button,.btn{font:inherit;font-size:16px;border:0;border-radius:999px;padding:12px 22px;margin:6px;cursor:pointer;color:#3a0b00;background:linear-gradient(90deg,var(--gold),var(--gold2));text-decoration:none;display:inline-block;font-weight:bold}
+button.alt{background:transparent;color:var(--gold);border:1px solid var(--gold)}
+button.big{font-size:22px;padding:18px 40px;box-shadow:0 8px 30px rgba(255,159,28,.45);animation:ring 1.8s infinite;transition:transform .15s}
+button.big:hover{transform:scale(1.06)}
+@keyframes ring{0%{box-shadow:0 0 0 0 rgba(255,159,28,.7),0 8px 30px rgba(255,159,28,.45)}70%{box-shadow:0 0 0 24px rgba(255,159,28,0),0 8px 30px rgba(255,159,28,.45)}100%{box-shadow:0 0 0 0 rgba(255,159,28,0),0 8px 30px rgba(255,159,28,.45)}}
+input{font:inherit;font-size:16px;padding:12px 16px;border-radius:999px;border:1px solid var(--line);background:rgba(0,0,0,.3);color:var(--ink);width:min(320px,90%);text-align:center}
+input::placeholder{color:rgba(255,244,220,.55)}
+.note{font-size:14px;opacity:.8;min-height:20px;margin-top:8px}
+[hidden]{display:none!important}
+.row{display:flex;justify-content:center;gap:6px;flex-wrap:wrap}
+button.diy{background:none;box-shadow:none;padding:6px;margin:0;font-size:54px;line-height:1;border-radius:16px;filter:grayscale(1) brightness(.55);transition:filter .5s,transform .3s}
+button.diy:hover{transform:scale(1.1)}
+button.diy.lit{filter:drop-shadow(0 0 14px var(--gold2)) drop-shadow(0 0 28px var(--gold));transform:scale(1.18);animation:flick 2.4s ease-in-out infinite}
+.msg p{margin:0 0 14px}.msg p:last-child{margin:0}
+.sign{color:var(--gold);margin-top:18px!important}
+.pop{animation:pop .9s ease both}
+@keyframes pop{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+footer{position:relative;z-index:1;padding:26px 20px 40px;font-size:14px;opacity:.8}
+</style>
+</head>
+<body>
+<canvas id="c"></canvas>
+<div class="lights" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+
+<main>
+  <header>
+    <div class="diya">🪔</div>
+    <div class="to" id="to"></div>
+    <h1>Happy Diwali</h1>
+    <div id="intro">
+      <p class="tag">✨ A little surprise is waiting for you ✨</p>
+      <button id="open" class="big">🪔 Light the Diya</button>
+    </div>
+  </header>
+
+  <div id="reveal" hidden>
+    <section>
+      <h2>Wishing you light, joy &amp; prosperity ✨</h2>
+      <div class="msg">
+        <p>Diwali is that special time when we pause, light a diya, and think of the people who make our lives brighter. Thank you for your support and good wishes.</p>
+        <p>May this Diwali fill your home with laughter, your heart with peace, and your days with a happiness that never fades. May every dream you are carrying find its way to you this year.</p>
+        <p>Wishing you and your family a very happy, sparkling and blessed Diwali. 💛</p>
+        <p class="sign">With warm wishes,<br><b>Aarav Shah</b></p>
+      </div>
+      <button id="boom">🎆 More fireworks</button>
+    </section>
+
+    <section>
+      <h2>Light a diya &amp; make a wish 🪔</h2>
+      <p class="tag" style="margin-bottom:18px">Close your eyes, think of a wish, and tap each diya to light it.</p>
+      <div class="row">
+        <button class="diy" aria-label="Light diya 1">🪔</button>
+        <button class="diy" aria-label="Light diya 2">🪔</button>
+        <button class="diy" aria-label="Light diya 3">🪔</button>
+        <button class="diy" aria-label="Light diya 4">🪔</button>
+        <button class="diy" aria-label="Light diya 5">🪔</button>
+      </div>
+      <div class="note" id="wishmsg" style="font-size:18px;color:var(--gold)">5 diyas are waiting for you…</div>
+    </section>
+  </div>
+
+</main>
+
+<footer>Made with love 💛 &nbsp;·&nbsp; Greetings from <b>Aarav Shah</b></footer>
+
+<script>
+(function(){
+  var $=function(i){return document.getElementById(i)};
+  function readName(){try{return decodeURIComponent((location.hash||'').slice(1)).replace(/-/g,' ').replace(/[^A-Za-z0-9 ]/g,'').trim()}catch(e){return ''}}
+  function showName(){var n=readName();$('to').textContent=n?'Dear '+n+',':''}
+  showName();addEventListener('hashchange',showName);
+
+  var cv=$('c'),x=cv.getContext('2d'),W,H,P=[];
+  function size(){W=cv.width=innerWidth;H=cv.height=innerHeight}size();addEventListener('resize',size);
+  function burst(px,py){
+    var h=Math.random()*60+20;
+    for(var i=0;i<70;i++){var a=Math.random()*6.283,s=Math.random()*5+1.5;
+      P.push({x:px,y:py,vx:Math.cos(a)*s,vy:Math.sin(a)*s,l:1,d:.012+Math.random()*.01,c:'hsl('+(h+Math.random()*40)+',100%,'+(55+Math.random()*20)+'%)',g:.06,r:2})}
+  }
+  function ember(){P.push({x:Math.random()*W,y:H+10,vx:(Math.random()-.5)*.6,vy:-(Math.random()*1.2+.4),l:1,d:.003+Math.random()*.004,c:'rgba(255,200,90,1)',g:0,r:Math.random()*2+.8})}
+  function show(n){for(var i=0;i<n;i++)setTimeout(function(){burst(W*(.15+Math.random()*.7),H*(.12+Math.random()*.4))},i*230)}
+  $('open').onclick=function(){
+    $('intro').hidden=true;var r=$('reveal');r.hidden=false;r.className='pop';show(5);
+  };
+  $('boom').onclick=function(){show(4)};
+  var lit=0,ds=document.querySelectorAll('.diy');
+  ds.forEach(function(d){d.onclick=function(){
+    if(d.classList.contains('lit'))return;
+    d.classList.add('lit');lit++;
+    var r=d.getBoundingClientRect();burst(r.left+r.width/2,r.top+r.height/2);
+    $('wishmsg').textContent=lit<ds.length?(ds.length-lit)+' more to go…':'✨ May every wish you made come true this Diwali ✨';
+    if(lit===ds.length)show(5);
+  }});
+  addEventListener('pointerdown',function(e){if(e.target.closest('button,a,input'))return;burst(e.clientX,e.clientY)});
+  (function loop(){
+    x.clearRect(0,0,W,H);
+    if(Math.random()<.35)ember();
+    for(var i=P.length-1;i>=0;i--){var p=P[i];p.x+=p.vx;p.y+=p.vy;p.vy+=p.g;p.l-=p.d;
+      if(p.l<=0){P.splice(i,1);continue}
+      x.globalAlpha=Math.max(p.l,0);x.fillStyle=p.c;x.beginPath();x.arc(p.x,p.y,p.r,0,6.283);x.fill()}
+    x.globalAlpha=1;requestAnimationFrame(loop);
+  })();
+})();
+</script>
+</body>
+</html>
